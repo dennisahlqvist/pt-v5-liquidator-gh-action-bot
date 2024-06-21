@@ -1,5 +1,4 @@
 name: CronJob - Liquidator Bot - Optimism
-runs-on: self-hosted
 on:
   schedule:
     - cron: "*/5 * * * *" # ie. 4:05pm, 4:10pm, 4:15pm ... etc.
@@ -18,7 +17,7 @@ permissions: write-all
 jobs:
   runCLI:
     name: Liquidator Bot
-    runs-on: ${{ matrix.os }}
+    runs-on: self-hosted
     strategy:
       max-parallel: 1
       matrix:
