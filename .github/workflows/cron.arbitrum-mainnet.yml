@@ -5,8 +5,8 @@ on:
   push:
 env:
   CHAIN_ID: 42161
-  MIN_PROFIT_THRESHOLD_USD: 0.2
-  SWAP_RECIPIENT: ''
+  MIN_PROFIT_THRESHOLD_USD: 0.01
+  SWAP_RECIPIENT: '0xfBC5aC58FC04fdE49c9dD133F602C68dfC4173D0'
   JSON_RPC_URL: ${{ secrets.ARBITRUM_MAINNET_JSON_RPC_URL }}
   COVALENT_API_KEY: ${{ secrets.COVALENT_API_KEY }}
   CUSTOM_RELAYER_PRIVATE_KEY: ${{ secrets.CUSTOM_RELAYER_PRIVATE_KEY }}
@@ -17,7 +17,7 @@ permissions: write-all
 jobs:
   runCLI:
     name: Liquidator Bot
-    runs-on: ${{ matrix.os }}
+    runs-on: self-hosted
     strategy:
       max-parallel: 1
       matrix:
