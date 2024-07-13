@@ -12,7 +12,7 @@ env:
   COVALENT_API_KEY: ${{ secrets.COVALENT_API_KEY }}
   CUSTOM_RELAYER_PRIVATE_KEY: ${{ secrets.CUSTOM_RELAYER_PRIVATE_KEY }}
   CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-mainnet/396f04daedc5a38935460ddf47d2f10e9ac1fec6/deployments/optimism/contracts.json'
-  ENV_TOKEN_ALLOW_LIST: '0xf1d934d5a3c6e530ac1450c92af5ba01eb90d4de,0x934c51eedbd0d558ab1c171498271930b4716295,0x7affb8cb92ddf9f9d0ba6fdcd7cd7905cb6d2ec1'
+  ENV_TOKEN_ALLOW_LIST: '0xf1d934d5a3c6e530ac1450c92af5ba01eb90d4de,0x934c51eedbd0d558ab1c171498271930b4716295,0x7affb8cb92ddf9f9d0ba6fdcd7cd7905cb6d2ec1,0xfdd33b8413a69ba9ce140b479f27ee7ab133850e'
   NODE_OPTIONS: "--max_old_space_size=32768"
 permissions: write-all
 jobs:
