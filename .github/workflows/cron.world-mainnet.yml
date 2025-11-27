@@ -1,7 +1,7 @@
 name: CronJob - Liquidator Bot - World
 on:
   schedule:
-    - cron: "*/20 * * * *" # ie. 4:20pm, 4:40pm, 5:00pm ... etc.
+    - cron: "50 * * * *" # ie. 4:50pm, 5:50pm ... etc.
   push:
   workflow_dispatch:
 env:
@@ -14,6 +14,7 @@ env:
   CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-mainnet/8e1432b70c1f135966c1b70917675cd586dda7be/deployments/world/contracts.json'
   ENV_TOKEN_ALLOW_LIST: ''
   NODE_OPTIONS: "--max_old_space_size=32768"
+  CLAIM_REWARDS: true
 permissions: write-all
 jobs:
   runCLI:
